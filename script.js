@@ -1,59 +1,27 @@
 const input_box = document.querySelector('.input_box');
-// let number1 = '';
-// let number2 = '';
-// let result = '';
-// let operator = '';
-
-// // Opertaorni kiritish funksiyasi
-// function inputSign(sign) {
-//     if (operator == "") {
-//         operator = sign;
-//         input_box.value += operator;
-//     }
-// }
-
-// function inputNumber(number) {
-//     if (operator == "") {
-//         number2 += number;
-//         input_box.value = number2;
-//     } else {
-//         number1 += number;
-//         input_box.value = number1;
-//     }
-// }
-
-
-
-// function calculate() {
-
-// }
-
-// function clearInput() {
-
-// }
-
-
-
-
+const test_element = document.querySelector('.test_element');
+const test_element2 = document.querySelector('.test_element2');
 
 let result;
 function inputNumber(number) {
-    if (result == "") {
+    if (sign_equal !== "="){
         input_box.value += number;
     }
 }
 
 var operator;
 function inputSign(sign) {
-    if (input_box.value !== "" && result == "") {
+    if (input_box.value !== "") {
         input_box.value += sign;
     }
     operator = sign;
+    sign_equal = '';
 }
 
-
+let sign_equal = "";
 function calculate() {
     let input_str;
+    sign_equal = "=";
     input_str = input_box.value;
     console.log("Ishora => ", operator);
     console.log("Kiritilgan ifoda => ", input_str);
@@ -78,11 +46,20 @@ function calculate() {
             result = num1 / num2;
             break;
     }
-    console.log("Natija => ", result);
+    console.log("Result => ", result);
     input_box.value = result;
+
+    // test elementlarni chiqorish
+    test_element.textContent = result;
+    test_element2.textContent = input_box.value;
 }
 
 function clearInput() {
     input_box.value = "";
-    result = "";
+    sign_equal = "";
+    test_element.textContent = result;
+    test_element2.textContent = input_box.value;
 }
+
+
+
