@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/output.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <section class="calc_background py-[158px]  bg-sky-700">
+        <div class="calculator w-[320px] py-[30px] bg-[#31363F] mx-auto rounded-xl border-b-[8px] border-black  flex flex-col justify-center items-center shadow ">
+            <div class="input_layer bg-black px-[10px] py-[20px] mb-[20px]">
+                <input value="Calculator" readonly type="text" class="input_box bg-[#D8D9DA] w-[300px] h-[55px] rounded-xl outline-none px-[10px] text-[20px]">
+            </div>
+            <div class="buttons grid grid-cols-4 grid-rows-4 gap-3">
+                <button onclick=" inputNumber(7) " class="button calc-btn">7</button>
+                <button onclick=" inputNumber(8) " class="button calc-btn">8</button>
+                <button onclick=" inputNumber(9) " class="button calc-btn">9</button>
+                <button onclick=" inputSign('*') " class="button calc-btn">*</button>
+                <button onclick=" inputNumber(4) " class="button calc-btn">4</button>
+                <button onclick=" inputNumber(5) " class="button calc-btn">5</button>
+                <button onclick=" inputNumber(6) " class="button calc-btn">6</button>
+                <button onclick=" inputSign('/') " class="button calc-btn">/</button>
+                <button onclick=" inputNumber(1) " class="button calc-btn">1</button>
+                <button onclick=" inputNumber(2) " class="button calc-btn">2</button>
+                <button onclick=" inputNumber(3) " class="button calc-btn">3</button>
+                <button onclick=" inputSign('-') " class="button calc-btn">-</button>
+                <button onclick=" inputNumber(0) " class="button calc-btn">0</button>
+                <button onclick=" calculate() " class="button text-2xl font-bold px-6 py-1 rounded-lg bg-amber-600 text-white hover:cursor-pointer active:bg-amber-900">=</button>
+                <button onclick=" inputSign('+') " class="button text-2xl font-bold px-6 py-1 rounded-lg bg-amber-600 text-white hover:cursor-pointer active:bg-amber-900">+</button>
+                <button onclick=" clearInput() " class="button calc-btn">C</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>
